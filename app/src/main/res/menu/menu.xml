@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        app:cnb_backgroundColor = "@color/teal_700"
+        app:cnb_textColor = "@color/white"
+        app:cnb_iconColor = "@color/white" />
+
+    <item android:id="@+id/healthcareproduct"
+        android:title="Healthcare"
+        android:icon="@drawable/healthcareicon"
+        app:cnb_backgroundColor = "@color/teal_700"
+        app:cnb_textColor = "@color/white"
+        app:cnb_iconColor = "@color/white" />
+
+    <item android:id="@+id/offer"
+        android:title="Offers"
+        android:icon="@drawable/iconoffer"
+        app:cnb_backgroundColor = "@color/teal_700"
+        app:cnb_textColor = "@color/white"
+        app:cnb_iconColor = "@color/white" />
+
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/account"
+        app:cnb_backgroundColor = "@color/teal_700"
+        app:cnb_textColor = "@color/white"
+        app:cnb_iconColor = "@color/white" />
+
+</menu>

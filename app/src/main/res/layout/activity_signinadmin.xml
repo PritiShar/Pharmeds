@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signinadmin"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/font"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="160dp"/>
+
+
+    <ImageView
+        android:id="@+id/certificate"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:src="@drawable/ic_baseline_account_box_24" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="(* Note Kindly upload your pharmacy Certificate)"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/border_style"
+        android:fontFamily="@font/font1"
+        android:padding="10dp"
+        android:inputType="text"
+        android:drawablePadding="10dp"
+        android:drawableEnd="@drawable/ic_baseline_person_outline_24"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="xyz@pharmacy.in "
+        android:autofillHints="emailAddress"
+        android:background="@drawable/border_style"
+        android:fontFamily="@font/font1"
+        android:padding="10dp"
+        android:inputType="textEmailAddress"
+        android:drawablePadding="10dp"
+        android:drawableEnd="@drawable/ic_baseline_mail_outline_24"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password "
+        android:autofillHints="emailAddress"
+        android:background="@drawable/border_style"
+        android:fontFamily="@font/font1"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:drawablePadding="10dp"
+        android:drawableEnd="@drawable/ic_baseline_lock_24"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/teal_700"
+        android:fontFamily="@font/font1"
+        android:text="SIGN in"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="privacy policy"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/logintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Log in"
+        android:textSize="18sp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

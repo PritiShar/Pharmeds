@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Pharmeds</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="texttitle">Welcome to Pharmeds!</string>
+    <string name="texttitle2">Upload Prescription!</string>
+    <string name="texttitle3">Get Ordered!</string>
+    <string name="texttitle4">Get Delivered!</string>
+    <string name="textdesc">Shop with us and enjoy an easy and convinience way to shop and buy medicines.</string>
+    <string name="textdesc2">Upload your doctors prescription with the required rules and buy medicines.</string>
+    <string name="textdesc3">Order your medicines and other Products and get a good discount with free gift vouchers.</string>
+    <string name="textdesc4">Get easy deliveries with first delivery free of charges.</string>
+    <string name="next">NEXT</string>
+    <string name="back">BACK</string>
+    <string name="skip">SKIP</string>
+    <string name="empty">empty</string>
+    <string name="email_id">Email id</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="sign_up">SIGN IN</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="last_signup">Already have an account?</string>
+    <string name="remember">remember me</string>
+    <string name="login">LOGIN</string>
+    <string name="login1"><u>Log In</u></string>
+    <string name="lastlogin">create an Account?</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="enter_your_phone_number">Enter your phone number:</string>
+    <string name="sign_in_with_phone">Sign in with phone</string>
+    <string name="background_image">Background Image</string>
+    <string name="register_now"><u>Register Now</u></string>
+    <string name="signinwithphone">Sign In With Phone</string>
+    <string name="signinwithgoogle">Sign In With Google</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- spinner categories -->
+    <string-array name="Catogeries">
+        <item>Allopathic</item>
+        <item>Homoeopathic</item>
+        <item>Diabetic care</item>
+        <item>Personal care</item>
+        <item>skin care</item>
+    </string-array>
+    <string-array name="rxrequired">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>

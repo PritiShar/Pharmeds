@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "644304655712",
+    "firebase_url": "https://pharmeds3-default-rtdb.firebaseio.com",
+    "project_id": "pharmeds3",
+    "storage_bucket": "pharmeds3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644304655712:android:53d7720e43df2487af7a05",
+        "android_client_info": {
+          "package_name": "com.priti.Pharmeds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644304655712-0d57sa1440nsft4dvpashsch3gll6dsg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtCyMVoH0_1qcoi_2ayMRXjKpz6rN2wcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644304655712-0d57sa1440nsft4dvpashsch3gll6dsg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

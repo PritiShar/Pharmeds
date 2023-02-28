@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable-v24/ic_baseline_account_box_24.xml" value="0.1495" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable-v24/ic_baseline_account_circle_24.xml" value="0.112" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable-v24/ic_baseline_arrow_back_24.xml" value="0.1495" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable-v24/ic_baseline_keyboard_arrow_down_24.xml" value="0.112" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable-v24/ic_baseline_search_24.xml" value="0.112" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable-v24/ic_baseline_shopping_cart_24.xml" value="0.112" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/border.xml" value="0.112" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/border_style.xml" value="0.1335" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/card1.xml" value="0.1315" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/card2.xml" value="0.121" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/card3.xml" value="0.121" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/card4.xml" value="0.12" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/ic_action_sort.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.1615" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/drawable/roundcorner.xml" value="0.112" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/font/font.xml" value="0.2791666666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_admin_home_page.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_appintro.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_categories_list.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_category.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_covidessentials.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_health_library.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_healthlibrary1.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_home_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_login.xml" value="0.234375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_loginadmin.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_medicine.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_medicinerecyclerview.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_prescription.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_recyclerview_categories.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_selectuser.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_shoppingcart.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_signinadmin.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_signinwithphonenumber.xml" value="0.2203125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_top_products.xml" value="0.2203125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/card_item.xml" value="0.109375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/content_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_healthcarefragment.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_homefragment.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_offerfragment.xml" value="0.176" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_profilefragment.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/grid_item.xml" value="0.152" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/item.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/shoppingcart.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/slider_lay.xml" value="0.23777173913043478" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/slider_layout.xml" value="0.1867704280155642" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/slider_layout_four.xml" value="0.23777173913043478" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/slider_layout_three.xml" value="0.23777173913043478" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/splashscreen.xml" value="0.2359375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/menu/menu.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/menu/menu1.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.priti.Pharmeds">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pharmeds"
+        tools:targetApi="31">
+        <activity
+            android:name=".MedicineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Medicinerecyclerview"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHomePage"
+            android:exported="false" />
+        <activity
+            android:name=".Loginadmin"
+            android:exported="false" />
+        <activity
+            android:name=".Signinadmin"
+            android:exported="false" />
+        <activity
+            android:name=".Selectuser"
+            android:exported="false" />
+        <activity
+            android:name=".shoppingcart"
+            android:exported="false" />
+        <activity
+            android:name=".healthlibrary1"
+            android:exported="false" />
+        <activity
+            android:name=".Covidessentials"
+            android:exported="false" />
+        <activity
+            android:name=".prescription"
+            android:exported="false" />
+        <activity
+            android:name=".topProducts"
+            android:exported="false" />
+        <activity
+            android:name=".healthLibrary"
+            android:exported="false" />
+        <activity
+            android:name=".HomeMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".signinwithphonenumber"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".Appintro"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".splashscreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -76,14 +76,16 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1">
                 <RelativeLayout
+                    android:id="@+id/categories"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/card3">
+                    android:background="@drawable/card3"
+                    >
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/bus"
+                        android:layout_below="@id/categoriesimage"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Categories"
@@ -91,7 +93,7 @@
                         android:textSize="20sp"
                         />
                     <ImageView
-                        android:id="@+id/bus"
+                        android:id="@+id/categoriesimage"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerHorizontal="true"
@@ -105,22 +107,24 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1">
                 <RelativeLayout
+                    android:id="@+id/Healthlibrary"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/card6">
+                    android:background="@drawable/card6"
+                    >
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/healthlibrarytext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/imageView3"
+                        android:layout_below="@id/HealthLibraryimage"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Health Library"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/HealthLibraryimage"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerHorizontal="true"
@@ -145,6 +149,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1">
                 <RelativeLayout
+                    android:id="@+id/Prescriptions"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/card5">
@@ -153,14 +158,14 @@
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/bus1"
+                        android:layout_below="@id/Prescriptionimage"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Prescriptions"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
                     <ImageView
-                        android:id="@+id/bus1"
+                        android:id="@+id/Prescriptionimage"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerHorizontal="true"
@@ -175,22 +180,24 @@
                 android:layout_weight="1"
                >
                 <RelativeLayout
+                    android:id="@+id/offers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/card4">
+                    android:background="@drawable/card4"
+                    >
 
                     <TextView
-                        android:id="@+id/textView7"
+                        android:id="@+id/offertext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/train"
+                        android:layout_below="@id/offerimage"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Offers"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
                     <ImageView
-                        android:id="@+id/train"
+                        android:id="@+id/offerimage"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerHorizontal="true"

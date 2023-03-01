@@ -36,7 +36,7 @@ public class Loginadmin extends AppCompatActivity {
             public void onClick(View view) {
 
                 loginuser();
-                startActivity(new Intent(Loginadmin.this,AdminHomePage.class));
+                startActivity(new Intent(Loginadmin.this,AdminMainActivity.class));
 
             }
         });

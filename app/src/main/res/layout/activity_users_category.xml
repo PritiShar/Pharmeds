@@ -31,20 +31,16 @@
                 android:layout_toEndOf="@id/image1"
                 android:layout_marginLeft="10dp"
                 />
-            <TextView
-                android:id="@+id/description1"
-                android:layout_width="wrap_content"
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="on vissco products"
-                android:textColor="#a9a9a9"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
                 android:layout_toEndOf="@id/image1"
-                android:layout_below="@id/title"
-                android:layout_margin="10dp"
-
-                />
-
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/title"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -163,13 +159,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:background="@drawable/card4"
+            android:background="@drawable/card5"
             android:layout_margin="15dp">
+
             <ImageView
+                android:id="@+id/image5"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:id="@+id/image5"
-                android:src="@drawable/mask"/>
+                android:src="@drawable/mask" />
 
             <TextView
                 android:id="@+id/title5"
@@ -192,6 +189,87 @@
                 android:textStyle="bold"
                 android:layout_toEndOf="@id/image5"
                 android:layout_below="@id/title5"
+                android:layout_margin="10dp"
+
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/card7"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/himalaya" />
+
+            <TextView
+                android:id="@+id/title6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ayurvedic Products"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/image6"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:id="@+id/description6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="on surgical Products"
+                android:textColor="#a9a9a9"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/image6"
+                android:layout_below="@id/title6"
+                android:layout_margin="10dp"
+
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/card8"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:id="@+id/image8"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/horlicks" />
+
+            <TextView
+                android:id="@+id/title8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Food and Drinks"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/image8"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:id="@+id/description8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="on surgical Products"
+                android:textColor="#a9a9a9"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/image8"
+                android:layout_below="@id/title8"
                 android:layout_margin="10dp"
 
                 />

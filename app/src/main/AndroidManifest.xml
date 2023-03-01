@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Pharmeds"
         tools:targetApi="31">
         <activity
+            android:name=".UsersCategory"
+            android:exported="false" />
+        <activity
             android:name=".MedicineActivity"
             android:exported="false" />
         <activity

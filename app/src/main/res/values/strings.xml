@@ -42,14 +42,26 @@
 
     <!-- spinner categories -->
     <string-array name="Catogeries">
-        <item>Allopathic</item>
+        <item>Ayurvedic</item>
         <item>Homoeopathic</item>
         <item>Diabetic care</item>
         <item>Personal care</item>
-        <item>skin care</item>
+        <item>Skin care</item>
+        <item>Healthcare</item>
+        <item>Baby care</item>
+        <item>Womens care</item>
+        <item>Mens care</item>
+        <item>Elderly care</item>
+        <item>Healthy Drinks</item>
+        <item>Covid Essentials</item>
+        <item>Medicines</item>
+
     </string-array>
     <string-array name="rxrequired">
         <item>Yes</item>
         <item>No</item>
     </string-array>
+
+
+
 </resources>

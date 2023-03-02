@@ -4,20 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login" android:orientation="vertical">
-    <ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="300dp"
-    android:src="@drawable/login"/>
+    tools:context=".login" android:orientation="vertical"
+    android:background="@drawable/background1">
 
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="5sp"
+        app:lottie_rawRes="@raw/pharmacy"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOG IN"
         android:textColor="@color/black"
-        android:fontFamily="@font/font1"
+        android:fontFamily="@font/font"
         android:textSize="30dp"
+
         android:layout_gravity="center"
         />
     <EditText

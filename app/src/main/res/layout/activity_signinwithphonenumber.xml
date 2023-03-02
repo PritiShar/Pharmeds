@@ -1,59 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".signinwithphonenumber"
+    android:background="@color/white">
 
-    <!--Edittext for getting users phone number-->
-    <EditText
-        android:id="@+id/editTextPhoneNumber"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:hint="@string/enter_your_phone_number"
-        android:importantForAutofill="no"
-        android:inputType="phone" />
+        android:orientation="vertical">
 
-    <!--Button for getting OTP-->
-
-    <!--Edittext for getting otp from user-->
-
-    <Button
-        android:id="@+id/buttonOTP"
+    <com.airbnb.lottie.LottieAnimationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPhoneNumber"
-        android:backgroundTint="@color/teal_700"
-        android:layout_marginTop="62dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/get_otp"
-        android:textAllCaps="false" />
+        android:layout_height="300dp"
+        android:layout_marginTop="5sp"
+        app:lottie_rawRes="@raw/otp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
-    <EditText
-        android:id="@+id/editTextOTP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonOTP"
-        android:layout_margin="10dp"
-        android:hint="@string/enter_otp"
-        android:importantForAutofill="no"
-        android:inputType="phone" />
 
-    <!--button for verifying user OTP-->
-    <Button
-        android:id="@+id/buttonVerify"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextOTP"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/verify_otp"
-        android:backgroundTint="@color/teal_700"
-        android:textAllCaps="false" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:text="OTP Verification"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Enter Your Phone number "
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Please Enter the OTP sent to you"
+            android:textSize="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor"/>
+
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor"></EditText>
+
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor"></EditText>
+
+            <EditText
+                android:id="@+id/otp5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor"></EditText>
+
+            <EditText
+                android:id="@+id/otp6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:text="Didn't receive the OTP ? "
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESEND OTP AGAIN"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/verify"
+                android:layout_width="325dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/teal_700"
+                android:text="Verify"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:onClick="address"
+                tools:ignore="OnClick">
+
+            </Button>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+            </ProgressBar>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

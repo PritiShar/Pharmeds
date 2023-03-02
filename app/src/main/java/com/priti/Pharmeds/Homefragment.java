@@ -1,5 +1,6 @@
 package com.priti.Pharmeds;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -21,6 +22,11 @@ import android.widget.ImageView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +42,11 @@ public class Homefragment extends Fragment {
     Button upload;
 
 
-    private RecyclerView topProducts,HealthLibrary;
+    RecyclerView topProducts,HealthLibraryrecyclerview;
+    List<HealthLibraryModel> healthLibraryModelList;
+    DatabaseReference databaseReference;
+    ValueEventListener eventListener;
+
 
     public Homefragment() {
         // Required empty public constructor
@@ -115,16 +125,48 @@ public class Homefragment extends Fragment {
         topproductsAdapter topproductsAdapter=new topproductsAdapter(imageList);
         topProducts.setAdapter(topproductsAdapter);
 
-        HealthLibrary = v.findViewById(R.id.HealthLibrary);
-        HealthLibrary.setHasFixedSize(true);
-        HealthLibrary.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
-        List<Healthlibrarymodelclass> imageList1 = new ArrayList<>();
-        imageList1.add(new Healthlibrarymodelclass(R.drawable.depression,"Depression leads to ..."));
-        imageList1.add(new Healthlibrarymodelclass(R.drawable.pimples,"cure your pimples with..."));
-        imageList1.add(new Healthlibrarymodelclass(R.drawable.homeremedies,"Home remedies to improve blood circulation.."));
-        imageList1.add(new Healthlibrarymodelclass(R.drawable.vegetables,"Diet to be included for Diabetes patients"));
-        healthlibraryAdapter healthadapter=new healthlibraryAdapter(imageList1);
-        HealthLibrary.setAdapter(healthadapter);
+        HealthLibraryrecyclerview = v.findViewById(R.id.HealthLibrary);
+        GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getActivity(),1);
+        HealthLibraryrecyclerview.setLayoutManager(gridLayoutManager1);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setCancelable(false);
+        builder.setView(R.layout.progess_layout);
+        AlertDialog dialog=builder.create();
+        dialog.show();
+
+        healthLibraryModelList=new ArrayList<>();
+        healthlibraryAdapter adapter1 = new healthlibraryAdapter(getActivity(),healthLibraryModelList);
+        HealthLibraryrecyclerview.setAdapter(adapter1);
+        databaseReference = FirebaseDatabase.getInstance().getReference("HealthLibrary");
+        dialog.show();
+
+        eventListener=databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                healthLibraryModelList.clear();
+                for(DataSnapshot itemSnapshot: snapshot.getChildren()){
+                    HealthLibraryModel healthLibraryModel=itemSnapshot.getValue(HealthLibraryModel.class);
+                    healthLibraryModelList.add(healthLibraryModel);
+                }
+                adapter1.notifyDataSetChanged();
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+             dialog.dismiss();
+            }
+        });
+//        HealthLibrary = v.findViewById(R.id.HealthLibrary);
+//        HealthLibrary.setHasFixedSize(true);
+//        HealthLibrary.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+//        List<Healthlibrarymodelclass> imageList1 = new ArrayList<>();
+//        imageList1.add(new Healthlibrarymodelclass(R.drawable.depression,"Depression leads to ..."));
+//        imageList1.add(new Healthlibrarymodelclass(R.drawable.pimples,"cure your pimples with..."));
+//        imageList1.add(new Healthlibrarymodelclass(R.drawable.homeremedies,"Home remedies to improve blood circulation.."));
+//        imageList1.add(new Healthlibrarymodelclass(R.drawable.vegetables,"Diet to be included for Diabetes patients"));
+//        healthlibraryAdapter healthadapter=new healthlibraryAdapter(imageList1);
+//        HealthLibrary.setAdapter(healthadapter);
 
         upload=v.findViewById(R.id.upload);
         upload.setOnClickListener(new View.OnClickListener() {

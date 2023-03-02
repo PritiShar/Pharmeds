@@ -41,6 +41,17 @@ public class HomeAdminFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        HealthLibrary =v.findViewById(R.id.HealthLibraryimage);
+        HealthLibrary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(),AdminHealthLibrary.class);
+                startActivity(i);
+            }
+        });
         return v;
+
+
     }
 }

@@ -126,8 +126,8 @@ public class Homefragment extends Fragment {
         topProducts.setAdapter(topproductsAdapter);
 
         HealthLibraryrecyclerview = v.findViewById(R.id.HealthLibrary);
-        GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getActivity(),1);
-        HealthLibraryrecyclerview.setLayoutManager(gridLayoutManager1);
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        HealthLibraryrecyclerview.setLayoutManager(linearLayoutManager1);
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setCancelable(false);
         builder.setView(R.layout.progess_layout);
@@ -139,6 +139,7 @@ public class Homefragment extends Fragment {
         HealthLibraryrecyclerview.setAdapter(adapter1);
         databaseReference = FirebaseDatabase.getInstance().getReference("HealthLibrary");
         dialog.show();
+
 
         eventListener=databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

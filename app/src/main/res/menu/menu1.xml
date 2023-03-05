@@ -7,4 +7,60 @@
         android:title="Sort"
         app:showAsAction="always"
         android:icon="@drawable/ic_action_sort"/>
+    <item
+        android:id="@+id/cat"
+        android:icon="@drawable/ic_action_sort"
+        android:title="Category"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/covid"
+                android:title="Covid Essential" />
+            <item
+                android:id="@+id/Healthdrinks"
+                android:title="Healthy Drinks" />
+            <item
+                android:id="@+id/allo"
+                android:title="Allopathic" />
+            <item
+                android:id="@+id/diabe"
+                android:title="Diabetic" />
+            <item
+                android:id="@+id/Beauty"
+                android:title="Beauty" />
+
+            <item
+                android:id="@+id/skincare"
+                android:title="Skin care" />
+
+            <item
+                android:id="@+id/homecare"
+                android:title="Home care" />
+            <item
+                android:id="@+id/ayurvedic"
+                android:title="Ayurvedic" />
+            <item
+                android:id="@+id/accessories"
+                android:title="Accessories" />
+            <item
+                android:id="@+id/babycare"
+                android:title="Baby care" />
+            <item
+                android:id="@+id/womenscare"
+                android:title="Womens care" />
+            <item
+                android:id="@+id/personalcare"
+                android:title="Personal care" />
+            <item
+                android:id="@+id/menscare"
+                android:title="Mens care" />
+            <item
+                android:id="@+id/elderlycare"
+                android:title="Elderly care" />
+            <item
+                android:id="@+id/medicines"
+                android:title="Medicines" />
+
+        </menu>
+    </item>
 </menu>

@@ -26,13 +26,13 @@ public class topproductsAdapter extends RecyclerView.Adapter<topproductsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull topproductsViewHolder holder, int position) {
-        holder.button.setText(topproductslist.get(position).getText());
-        holder.image.setImageResource(topproductslist.get(position).getImage());
+        holder.getButton().setText(topproductslist.get(position).getText());
+        holder.getImage().setImageResource(topproductslist.get(position).getImage());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return topproductslist.size();
     }
 
 
@@ -43,6 +43,14 @@ public class topproductsAdapter extends RecyclerView.Adapter<topproductsAdapter.
             super(itemView);
             image=itemView.findViewById(R.id.topproduct1);
             button=itemView.findViewById(R.id.button);
+        }
+
+        public ImageView getImage() {
+            return image;
+        }
+
+        public Button getButton() {
+            return button;
         }
     }
 }

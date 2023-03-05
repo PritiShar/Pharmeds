@@ -58,7 +58,7 @@ public class ViewHolder extends RecyclerView.ViewHolder{
 
     }
 
-    private ClickListener mClickListener;
+    private ViewHolder.ClickListener mClickListener;
 
     //interface to send callbacks
     public interface ClickListener{
@@ -66,7 +66,7 @@ public class ViewHolder extends RecyclerView.ViewHolder{
         void onItemLongClick(View  view, int position);
     }
 
-    public void setOnClickListener(ClickListener clickListener){
+    public void setOnClickListener(ViewHolder.ClickListener clickListener){
         mClickListener = clickListener;
     }
 }

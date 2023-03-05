@@ -202,6 +202,20 @@
 
 
         </LinearLayout>
+        <EditText
+            android:id="@+id/sideeffects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Side Effects"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:background="@drawable/border_style"
+            android:textSize="20sp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="9000"
+            android:maxLines="30"
+            android:layout_marginTop="10dp"
+            />
     <Button
         android:id="@+id/send"
         android:layout_width="wrap_content"

@@ -10,6 +10,7 @@ public class ProductModel {
     String meddescription;
     String fileurl;
     String rx;
+    String sideeffects;
     public String getFileurl() {
         return fileurl;
     }
@@ -18,7 +19,19 @@ public class ProductModel {
         return rx;
     }
 
-    public ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription,String rx, String fileurl) {
+//    public ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription,String rx, String fileurl) {
+//        this.categories = categories;
+//        this.medname = medname;
+//        this.mfgname = mfgname;
+//        this.price = price;
+//        this.mfgdate = mfgdate;
+//        this.expdate = expdate;
+//        this.meddescription = meddescription;
+//        this.fileurl = fileurl;
+//        this.rx = rx;
+//    }
+
+    public ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription, String fileurl, String rx, String sideeffects) {
         this.categories = categories;
         this.medname = medname;
         this.mfgname = mfgname;
@@ -28,9 +41,14 @@ public class ProductModel {
         this.meddescription = meddescription;
         this.fileurl = fileurl;
         this.rx = rx;
+        this.sideeffects = sideeffects;
     }
 
     public ProductModel() {
+    }
+
+    public String getSideeffects() {
+        return sideeffects;
     }
 
     public String getCategories() {

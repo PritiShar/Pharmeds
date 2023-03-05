@@ -114,7 +114,7 @@ public class Homefragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         topProducts = v.findViewById(R.id.Topproductsrecyclerview);
-        topProducts.setHasFixedSize(true);
+//        topProducts.setHasFixedSize(true);
         topProducts.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
         List<topproductsmodelclass> imageList = new ArrayList<>();
         imageList.add(new topproductsmodelclass(R.drawable.menscare,"Add to cart"));

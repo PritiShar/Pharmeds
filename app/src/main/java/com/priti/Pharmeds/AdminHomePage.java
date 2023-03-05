@@ -44,7 +44,7 @@ public class AdminHomePage extends AppCompatActivity {
     TextView tvmfgdate, tvexpdate;
     ProgressDialog progressDialog;
     Spinner spinner,rx;
-    EditText medname, mfgname, price, meddescription;
+    EditText medname, mfgname, price, meddescription,sideeffects;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Products");
     StorageReference storageReference = FirebaseStorage.getInstance().getReference("ProductsImage");
     @Override
@@ -62,6 +62,7 @@ public class AdminHomePage extends AppCompatActivity {
         medname = findViewById(R.id.medname);
         mfgname = findViewById(R.id.mfgname);
         price = findViewById(R.id.price);
+        sideeffects=findViewById(R.id.sideeffects);
         meddescription = findViewById(R.id.meddescription);
         rx = findViewById(R.id.rxrequired);
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -161,6 +162,7 @@ public class AdminHomePage extends AppCompatActivity {
                             String MfgName = mfgname.getText().toString();
                             String Price = price.getText().toString();
                             String MedDescription = meddescription.getText().toString();
+                            String sideEffects = sideeffects.getText().toString();
                             progressDialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Post Uploaded Successfully!", Toast.LENGTH_LONG).show();
 
@@ -169,9 +171,9 @@ public class AdminHomePage extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     String url = uri.toString();
 //                                    ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription,String fileurl)
-                                    ProductModel productModel = new ProductModel(Category,MedName,MfgName,Price,MfgDate,ExpDate,MedDescription,rxrequired, url);
+                                    ProductModel productModel = new ProductModel(Category,MedName,MfgName,Price,MfgDate,ExpDate,MedDescription,url,rxrequired,sideEffects);
                                     String medInfo = databaseReference.push().getKey();
-                                    databaseReference.child(medInfo).setValue(productModel);
+                                    databaseReference.child(Category).child(medInfo).setValue(productModel);
                                 }
                             });
                         }

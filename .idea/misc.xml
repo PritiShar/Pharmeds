@@ -48,7 +48,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_signup.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_top_products.xml" value="0.2203125" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_top_products.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/activity_users_category.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/card_item.xml" value="0.109375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/content_splash_screen.xml" value="0.25" />
@@ -61,7 +61,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_orders_admin.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_profile_admin.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/fragment_profilefragment.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/grid_item.xml" value="0.152" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/grid_item.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/item.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/progess_layout.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/recycler_healthlibrary.xml" value="0.24895833333333334" />
@@ -71,6 +71,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/slider_layout_four.xml" value="0.23777173913043478" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/slider_layout_three.xml" value="0.23777173913043478" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/layout/splashscreen.xml" value="0.2359375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/menu/category.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/menu/menu1.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Pharmeds3/app/src/main/res/menu/menu_main.xml" value="0.24895833333333334" />

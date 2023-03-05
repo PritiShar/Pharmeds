@@ -13,8 +13,6 @@ public class topproductsmodelclass {
     }
 
     public int getImage() {
-
-
         return image;
     }
 

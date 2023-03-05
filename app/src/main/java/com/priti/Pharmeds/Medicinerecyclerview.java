@@ -3,6 +3,7 @@ package com.priti.Pharmeds;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,6 +21,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -32,6 +35,7 @@ import java.io.ByteArrayOutputStream;
 
 
 public class Medicinerecyclerview extends AppCompatActivity {
+
     SharedPreferences mSharedPref; //for saving sort settings
     RecyclerView mRecyclerView;
     FirebaseDatabase mFirebaseDatabase;
@@ -41,9 +45,13 @@ public class Medicinerecyclerview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicinerecyclerview);
+        Toolbar toolbar =findViewById(R.id.toolbar);
+        toolbar.setTitle("Product Details");
+        AppCompatActivity activity = (AppCompatActivity) this;
+        activity.setSupportActionBar(toolbar);
         mSharedPref = getSharedPreferences("SortSettings", MODE_PRIVATE);
         String mSorting = mSharedPref.getString("Sort", "newest"); //where if no settings is selected newest will be default
-
+        String valuefromcat = getIntent().getStringExtra("covien");
 //        LinearLayoutManagerWrapper mLayoutManager = new LinearLayoutManagerWrapper(MainActivity.this);
         LinearLayoutManagerWrapper mLayoutManager =
                 new LinearLayoutManagerWrapper(Medicinerecyclerview.this, LinearLayoutManager.VERTICAL, true);
@@ -58,7 +66,6 @@ public class Medicinerecyclerview extends AppCompatActivity {
             mLayoutManager.setStackFromEnd(false);
         }
 
-        //RecyclerView
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         //set layout as LinearLayout
@@ -66,20 +73,26 @@ public class Medicinerecyclerview extends AppCompatActivity {
 //        mRecyclerView.setNestedScrollingEnabled(false);
 
         //send Query to FirebaseDatabase
-        mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mRef = mFirebaseDatabase.getReference("Products");
+        if(valuefromcat!=null){
+            customAdapterString(valuefromcat);
+        }else{
+            customAdapterString("");
+        }
+    }
+    private void customAdapterString(String holder) {
+        mRef = FirebaseDatabase.getInstance().getReference("Products").child(holder);
         Query query = mRef.orderByKey();
-        FirebaseRecyclerOptions<ProductModel> options = new FirebaseRecyclerOptions.Builder<ProductModel>().setQuery(query,ProductModel.class).build();
+
+        FirebaseRecyclerOptions<ProductModel> options = new FirebaseRecyclerOptions.Builder<ProductModel>().setQuery(query, ProductModel.class).build();
         adapter = new FirebaseRecyclerAdapter<ProductModel, ViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull ProductModel model) {
-                holder.setDetails(getApplicationContext(),model.getCategories(),model.getMedname(),model.getMfgname(),model.getPrice()
-                        ,model.getMfgdate(),model.getExpdate(),model.getMeddescription(),model.getFileurl());
+                holder.setDetails(getApplicationContext(), model.getCategories(), model.getMedname(), model.getMfgname(), model.getPrice(),  model.getMfgdate(), model.getExpdate(), model.getMeddescription(), model.getFileurl());
                 holder.setOnClickListener(new ViewHolder.ClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
                         ImageView imageView;
-                        TextView medicineName, medicinePrice, mfgname1, mfgdate1, expdate1,medicinecategory;
+                        TextView medicineName, medicinePrice, mfgname1, mfgdate1, expdate1, medicinecategory;
                         imageView = view.findViewById(R.id.imageView);
                         medicineName = view.findViewById(R.id.medicine_name);
                         medicinePrice = view.findViewById(R.id.Price);
@@ -89,17 +102,21 @@ public class Medicinerecyclerview extends AppCompatActivity {
                         medicinecategory = view.findViewById(R.id.category);
                         Drawable mDrawable = imageView.getDrawable();
                         Bitmap mBitmap = ((BitmapDrawable) mDrawable).getBitmap();
-                        Intent intent = new Intent(getApplicationContext(),MedicineActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), MedicineActivity.class);
                         ByteArrayOutputStream stream = new ByteArrayOutputStream();
                         mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
                         byte[] bytes = stream.toByteArray();
-                        intent.putExtra("image",bytes);
-                        intent.putExtra("medname",medicineName.getText().toString());
-                        intent.putExtra("mfgname",mfgname1.getText().toString());
-                        intent.putExtra("meddes",model.getMeddescription());
+                        intent.putExtra("image", bytes);
+                        intent.putExtra("medname", medicineName.getText().toString());
+                        intent.putExtra("mfgname", mfgname1.getText().toString());
+                        intent.putExtra("meddes", model.getMeddescription());
+                        intent.putExtra("price",medicinePrice.getText().toString());
+                        intent.putExtra("category",medicinecategory.getText().toString());
+                        intent.putExtra("mfgdate",mfgdate1.getText().toString());
+                        intent.putExtra("expdate",expdate1.getText().toString());
+                        intent.putExtra("sideffect",model.getSideeffects().toString());
                         startActivity(intent);
                     }
-
                     @Override
                     public void onItemLongClick(View view, int position) {
 
@@ -115,9 +132,11 @@ public class Medicinerecyclerview extends AppCompatActivity {
                 return new ViewHolder(view);
             }
         };
-
+        adapter.startListening();
         mRecyclerView.setAdapter(adapter);
     }
+
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -129,6 +148,7 @@ public class Medicinerecyclerview extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu1, menu);
@@ -138,15 +158,65 @@ public class Medicinerecyclerview extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        switch (id) {
+            case R.id.action_sort:
+                showSortDialog();
+                break;
+            case R.id.covid:
+                //Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show();
+                customAdapterString("Covid Essentials");
+                break;
+            case R.id.allo:
+                customAdapterString("Allopathic");
+                break;
+            case R.id.diabe:
+                customAdapterString("Diabetic care");
+                break;
+            case R.id.personalcare:
+                customAdapterString("Personal care");
+                break;
+            case R.id.Beauty:
+                customAdapterString("Beauty");
+                break;
+            case R.id.Healthdrinks:
+                customAdapterString("Healthy Drinks");
+                break;
+            case R.id.skincare:
+                customAdapterString("Skin care");
+                break;
+            case R.id.homecare:
+                customAdapterString("Home care");
+                break;
+            case R.id.ayurvedic:
+                customAdapterString("Ayurvedic");
+                break;
+            case R.id.accessories:
+                customAdapterString("Accessories");
+                break;
+            case R.id.babycare:
+                customAdapterString("Baby care");
+                break;
+            case R.id.womenscare:
+                customAdapterString("Womens care");
+                break;
+            case R.id.menscare:
+                customAdapterString("Mens care");
+                break;
+            case R.id.elderlycare:
+                customAdapterString("Elderly care");
+                break;
+            case R.id.medicines:
+                customAdapterString("Medicines");
+                break;
 
-        //handle other action bar item clicks here
-        if (id == R.id.action_sort) {
-            //display alert dialog to choose sorting
-            showSortDialog();
-            return true;
+            default:
+                customAdapterString("");
+                break;
         }
+        //handle other action bar item clicks here
         return super.onOptionsItemSelected(item);
     }
+
     private void showSortDialog() {
         //options to display in dialog
         String[] sortOptions = {" Newest", " Oldest"};

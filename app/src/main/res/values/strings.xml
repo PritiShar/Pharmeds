@@ -55,6 +55,11 @@
         <item>Healthy Drinks</item>
         <item>Covid Essentials</item>
         <item>Medicines</item>
+        <item>Beauty</item>
+        <item>Allopathic</item>
+        <item>Home care</item>
+        <item>Accessories</item>
+
 
     </string-array>
     <string-array name="rxrequired">

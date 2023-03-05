@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_action_sort"
+        android:title="Category"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/homeo"
+                android:title="Homoeopathic" />
+            <item
+                android:id="@+id/allo"
+                android:title="Allopathic" />
+            <item
+                android:id="@+id/diabe"
+                android:title="Diabetic" />
+            <item
+                android:id="@+id/personalcare"
+                android:title="Personal care" />
+
+        </menu>
+    </item>
+</menu>

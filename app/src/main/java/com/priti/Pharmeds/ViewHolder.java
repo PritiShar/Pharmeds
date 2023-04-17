@@ -40,7 +40,7 @@ public class ViewHolder extends RecyclerView.ViewHolder{
     //set details to recycler view row
     public void setDetails(Context ctx, String categories ,String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription, String fileurl){
         ImageView imageView;
-        TextView medicineName, medicinePrice, mfgname1, mfgdate1, expdate1,medicinecategory;
+        TextView medicineName, medicinePrice, mfgname1, mfgdate1, expdate1,medicinecategory,medsideeff;
         imageView = mView.findViewById(R.id.imageView);
         medicineName = mView.findViewById(R.id.medicine_name);
         medicinePrice = mView.findViewById(R.id.Price);
@@ -54,6 +54,7 @@ public class ViewHolder extends RecyclerView.ViewHolder{
         expdate1.setText(expdate);
         mfgname1.setText(mfgname);
         medicinecategory.setText(categories);
+
         Picasso.get().load(fileurl).into(imageView);
 
     }

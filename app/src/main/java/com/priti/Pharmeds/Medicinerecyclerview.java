@@ -83,11 +83,15 @@ public class Medicinerecyclerview extends AppCompatActivity {
         mRef = FirebaseDatabase.getInstance().getReference("Products").child(holder);
         Query query = mRef.orderByKey();
 
-        FirebaseRecyclerOptions<ProductModel> options = new FirebaseRecyclerOptions.Builder<ProductModel>().setQuery(query, ProductModel.class).build();
+        FirebaseRecyclerOptions<ProductModel> options = new FirebaseRecyclerOptions.Builder<ProductModel>().
+                setQuery(query, ProductModel.class).build();
         adapter = new FirebaseRecyclerAdapter<ProductModel, ViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull ProductModel model) {
-                holder.setDetails(getApplicationContext(), model.getCategories(), model.getMedname(), model.getMfgname(), model.getPrice(),  model.getMfgdate(), model.getExpdate(), model.getMeddescription(), model.getFileurl());
+            protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull ProductModel model)
+            {
+                holder.setDetails(getApplicationContext(), model.getCategories(), model.getMedname(),
+                        model.getMfgname(), model.getPrice(),  model.getMfgdate(), model.getExpdate(),
+                        model.getMeddescription(), model.getFileurl());
                 holder.setOnClickListener(new ViewHolder.ClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
@@ -102,6 +106,7 @@ public class Medicinerecyclerview extends AppCompatActivity {
                         medicinecategory = view.findViewById(R.id.category);
                         Drawable mDrawable = imageView.getDrawable();
                         Bitmap mBitmap = ((BitmapDrawable) mDrawable).getBitmap();
+                        String medsid = model.getSideeffects();
                         Intent intent = new Intent(getApplicationContext(), MedicineActivity.class);
                         ByteArrayOutputStream stream = new ByteArrayOutputStream();
                         mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
@@ -114,7 +119,7 @@ public class Medicinerecyclerview extends AppCompatActivity {
                         intent.putExtra("category",medicinecategory.getText().toString());
                         intent.putExtra("mfgdate",mfgdate1.getText().toString());
                         intent.putExtra("expdate",expdate1.getText().toString());
-                        intent.putExtra("sideffect",model.getSideeffects().toString());
+                        intent.putExtra("sideffect",medsid);
                         startActivity(intent);
                     }
                     @Override

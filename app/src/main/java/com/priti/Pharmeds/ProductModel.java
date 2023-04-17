@@ -31,7 +31,7 @@ public class ProductModel {
 //        this.rx = rx;
 //    }
 
-    public ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription, String fileurl, String rx, String sideeffects) {
+    public ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription,String rx, String fileurl,String sideeffects) {
         this.categories = categories;
         this.medname = medname;
         this.mfgname = mfgname;

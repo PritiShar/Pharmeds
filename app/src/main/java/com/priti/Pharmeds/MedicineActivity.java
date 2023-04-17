@@ -48,7 +48,8 @@ public class MedicineActivity extends AppCompatActivity {
         category.setText(getIntent().getStringExtra("category"));
         mfgdate.setText(getIntent().getStringExtra("mfgdate"));
         expdate.setText(getIntent().getStringExtra("expdate"));
-        sideeffects.setText(getIntent().getStringExtra("sideeffect"));
+        String sd = getIntent().getStringExtra("sideffect");
+        sideeffects.setText(sd);
 
         imageView.setImageBitmap(bmp);
         bitmap = ((BitmapDrawable)imageView.getDrawable()).getBitmap();

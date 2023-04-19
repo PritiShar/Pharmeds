@@ -111,6 +111,7 @@ public class Medicinerecyclerview extends AppCompatActivity {
                         mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
                         byte[] bytes = stream.toByteArray();
                         intent.putExtra("image", bytes);
+                        intent.putExtra("fileurl",model.getFileurl());
                         intent.putExtra("medname", medicineName.getText().toString());
                         intent.putExtra("mfgname", mfgname1.getText().toString());
                         intent.putExtra("meddes", model.getMeddescription());

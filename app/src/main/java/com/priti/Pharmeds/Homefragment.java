@@ -74,7 +74,13 @@ public class Homefragment extends Fragment {
         slideModels.add(new SlideModel(R.drawable.imageslider4, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.imageslider5, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.imageslider6,  ScaleTypes.FIT));
-
+        ImageView view = v.findViewById(R.id.shoppingcart);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(),Addtocart.class));
+            }
+        });
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
 
         recyclerView=v.findViewById(R.id.recyclerview);

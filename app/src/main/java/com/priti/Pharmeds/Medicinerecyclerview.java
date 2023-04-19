@@ -65,7 +65,6 @@ public class Medicinerecyclerview extends AppCompatActivity {
             mLayoutManager.setReverseLayout(false);
             mLayoutManager.setStackFromEnd(false);
         }
-
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         //set layout as LinearLayout
@@ -76,7 +75,7 @@ public class Medicinerecyclerview extends AppCompatActivity {
         if(valuefromcat!=null){
             customAdapterString(valuefromcat);
         }else{
-            customAdapterString("");
+            customAdapterString("Womens care");
         }
     }
     private void customAdapterString(String holder) {

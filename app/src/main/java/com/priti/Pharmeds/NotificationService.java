@@ -34,7 +34,5 @@ NotificationService extends FirebaseMessagingService {
 //                .setContentIntent(pi)
         NotificationManagerCompat manager = NotificationManagerCompat.from(this);
         manager.notify(999, builder.build());
-
-
     }
 }

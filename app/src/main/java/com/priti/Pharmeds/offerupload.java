@@ -113,7 +113,7 @@ public class offerupload extends AppCompatActivity {
 //                                    ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription,String fileurl)
                                     OfferModel offerModel = new OfferModel(title1,description1,url,percentoff1);
                                     String offerInfo = databaseReference.push().getKey();
-                                    databaseReference.child(percentoff1).child(offerInfo).setValue(offerModel);
+                                    databaseReference.child(offerInfo).setValue(offerModel);
                                 }
                             });
                         }

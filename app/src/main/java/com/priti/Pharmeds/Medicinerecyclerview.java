@@ -127,7 +127,6 @@ public class Medicinerecyclerview extends AppCompatActivity {
 
                     }
                 });
-
             }
 
             @NonNull

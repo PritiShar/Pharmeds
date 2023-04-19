@@ -50,6 +50,14 @@ public class HomeAdminFragment extends Fragment {
                 startActivity(i);
             }
         });
+        Offers=v.findViewById(R.id.offerimage);
+        Offers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(),offerupload.class);
+                startActivity(i);
+            }
+        });
         return v;
 
 

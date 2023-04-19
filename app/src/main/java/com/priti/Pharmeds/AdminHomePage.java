@@ -15,6 +15,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -77,6 +78,7 @@ public class AdminHomePage extends AppCompatActivity {
                         prodimage.setImageBitmap(bitmap);
                     } catch (IOException e) {
                         e.printStackTrace();
+                        Log.d("error in image","not captured image");
                     }
                 }
             }
@@ -171,7 +173,7 @@ public class AdminHomePage extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     String url = uri.toString();
 //                                    ProductModel(String categories, String medname, String mfgname, String price, String mfgdate, String expdate, String meddescription,String fileurl)
-                                    ProductModel productModel = new ProductModel(Category,MedName,MfgName,Price,MfgDate,ExpDate,MedDescription,url,rxrequired,sideEffects);
+                                    ProductModel productModel = new ProductModel(Category,MedName,MfgName,Price, MfgDate,ExpDate,MedDescription,url,rxrequired,sideEffects);
                                     String medInfo = databaseReference.push().getKey();
                                     databaseReference.child(Category).child(medInfo).setValue(productModel);
                                 }

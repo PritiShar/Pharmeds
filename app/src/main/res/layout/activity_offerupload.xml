@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".offerupload"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <ImageView
+        android:id="@+id/uploadimageoffer"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/uploadimage"/>
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title of offer"
+        android:background="@drawable/border"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+    <EditText
+        android:id="@+id/percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="percent off"
+        android:background="@drawable/border"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/descoffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:background="@drawable/border"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:maxLength="1000"
+        />
+    <Button
+        android:id="@+id/uploadoffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

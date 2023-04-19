@@ -197,6 +197,7 @@
                         android:text="Offers"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:id="@+id/offerimage"
                         android:layout_width="75dp"

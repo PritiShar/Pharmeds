@@ -53,8 +53,8 @@ class MyViewHolder1 extends RecyclerView.ViewHolder{
     CardView upCard;
     public MyViewHolder1(@NonNull View itemView) {
         super(itemView);
-        upImage=itemView.findViewById(R.id.offerimage);
-        upTitle = itemView.findViewById(R.id.offertitle);
+        upImage=itemView.findViewById(R.id.offerimage1);
+        upTitle = itemView.findViewById(R.id.offertitle1);
         upCard = itemView.findViewById(R.id.cardviewoffer);
         uppercentoff=itemView.findViewById(R.id.percentoffer);
         updescription=itemView.findViewById(R.id.descriptionoffer);

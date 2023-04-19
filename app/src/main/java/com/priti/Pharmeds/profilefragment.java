@@ -80,7 +80,6 @@ public class profilefragment extends Fragment {
             String name = mUser.getDisplayName();
             String email = mUser.getEmail();
 
-
             ttname.setText(name);
             ttemail.setText(email);
 

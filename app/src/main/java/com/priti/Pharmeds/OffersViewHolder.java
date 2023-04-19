@@ -38,12 +38,12 @@ public class OffersViewHolder extends RecyclerView.ViewHolder{
     public void setDetails(Context ctx,String title,String description,String fileurl,String percentoff){
         ImageView imageView;
         TextView title1,description1,percentoff1;
-        imageView=mView.findViewById(R.id.offerimage);
-        title1 = mView.findViewById(R.id.offertitle);
+        imageView=mView.findViewById(R.id.offerimage1);
+        title1 = mView.findViewById(R.id.offertitle1);
         description1=mView.findViewById(R.id.descriptionoffer);
         percentoff1 = mView.findViewById(R.id.percentoffer);
         title1.setText(title);
-       description1.setText(description);
+        description1.setText(description);
         percentoff1.setText(percentoff);
 
         Picasso.get().load(fileurl).into(imageView);

@@ -65,7 +65,6 @@ public class Medicinerecyclerview extends AppCompatActivity {
             mLayoutManager.setReverseLayout(false);
             mLayoutManager.setStackFromEnd(false);
         }
-
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         //set layout as LinearLayout
@@ -76,7 +75,7 @@ public class Medicinerecyclerview extends AppCompatActivity {
         if(valuefromcat!=null){
             customAdapterString(valuefromcat);
         }else{
-            customAdapterString("");
+            customAdapterString("Womens care");
         }
     }
     private void customAdapterString(String holder) {
@@ -112,6 +111,7 @@ public class Medicinerecyclerview extends AppCompatActivity {
                         mBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
                         byte[] bytes = stream.toByteArray();
                         intent.putExtra("image", bytes);
+                        intent.putExtra("fileurl",model.getFileurl());
                         intent.putExtra("medname", medicineName.getText().toString());
                         intent.putExtra("mfgname", mfgname1.getText().toString());
                         intent.putExtra("meddes", model.getMeddescription());

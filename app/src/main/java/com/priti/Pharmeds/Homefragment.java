@@ -116,6 +116,7 @@ public class Homefragment extends Fragment {
         MyAdapter adapter = new MyAdapter(getActivity(), title, images);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),3,GridLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(gridLayoutManager);
+        //noinspection InvalidSetHasFixedSize
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
